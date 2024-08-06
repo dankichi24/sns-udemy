@@ -62,6 +62,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const logout = () => {
     localStorage.removeItem("auth_token");
+    delete apiClient.defaults.headers["Authorication"];
+    setUser(null);
   };
 
   const value = {
