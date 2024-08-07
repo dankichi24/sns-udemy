@@ -1,5 +1,6 @@
 import React from "react";
 import { PostType } from "../types";
+import Image from "next/image";
 
 type Props = {
   post: PostType;
@@ -13,8 +14,8 @@ const Post = (props: Props) => {
       <div className="mb-4">
         <div className="flex items-center mb-2">
           <img
+            src={post.author.profile?.profileImageUrl}
             className="w-10 h-10 rounded-full mr-2"
-            src="https://via.placeholder.com/150"
             alt="User Avatar"
           />
           <div>
